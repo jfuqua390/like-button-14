@@ -1,3 +1,13 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">WHATCHU LIKE BRA</h2>
+
+{{log model}}
+<p>
+  {{#each model as |movie|}}
+    <h1>{{movie.title}}</h1>
+    <h2>
+      {{like-counter score=movie.score movieId=movie._id}}
+    </h2>
+  {{/each}}
+</p>
 
 {{outlet}}
